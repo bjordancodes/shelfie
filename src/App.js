@@ -7,6 +7,15 @@ import Form from './component/Form/Form';
 import Product from './component/Product/Product';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      inventory: []
+    }
+  }
+  // get inventory from database
+
+  
   render() {
     return (
       <div className="App">
