@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import './form.css';
+import '../Form/form.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
-class Form extends Component{
+export default class Updater extends Component{
     constructor(){
         super();
         this.state= {
@@ -26,10 +27,10 @@ class Form extends Component{
        document.getElementById("myForm").reset();
    }
 
-    addProduct(){
-        var {product_name, price, imageurl} = this.state;
+    updateProduct(){
+        var {id, product_name, price, imageurl} = this.state;
         axios
-        .post(`api/products?product_name=${product_name}&price=${price}&producturl=${imageurl}`)
+        .put(`api/products/${this.props.match.params.id}?product_name=${product_name}&price=${price}&producturl=${imageurl}`)
         .then(res=> console.log("update complete!"))
         .catch(err=> this.status(500).alert("internal error"));
     }
@@ -46,10 +47,8 @@ create
             <input onChange={(e)=> this.handleUrl(e.target.value)} 
             placeholder="Image URL"/><br/>
             <button className="btn" onClick={this.resetForm}>Cancel</button>
-            <button className="btn" onClick={()=>this.addProduct()}>Add to Inventory</button>
+            <button className="btn" onClick={()=>this.updateProduct()}>Update Inventory</button>
             </form>
         </div>)
     }
 }
-
-export default Form;

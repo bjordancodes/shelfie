@@ -1,0 +1,40 @@
+.productBox{
+    height: 200px;
+    width: 500px;
+    background-color: #D34735;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.imgBox{
+    height: 150px;
+    width: 200px;
+    margin: 20px;
+}
+
+.text1{
+    font-size: 15px;
+    text-align: left;
+    height: 125px;
+    padding: 10px;
+}
+
+.spacer{
+    height: 50px;
+}
+
+.myBtns{
+    display: flex;
+    width: 240px;
+    justify-content: space-between;
+}
+
+.greenBtn{
+    background-color: #3AD886;
+    border-radius: 10px;
+    padding: 10px;
+    padding: 10px;
+}

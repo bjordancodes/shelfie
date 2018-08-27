@@ -1,0 +1,19 @@
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #AB2A19;
+    color: white;
+    align-content: center;
+    margin: 0px 0px 20px 0px;
+}
+
+h1{
+    margin: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.imghere{
+    height:50px;
+    width: 50px;
+    margin: 5px;
+}
