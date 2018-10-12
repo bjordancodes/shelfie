@@ -43,7 +43,8 @@ export default class Dashboard extends Component{
         <HashRouter><dashboard>
         <div><Product product={this.state.inventory} deleteItem={this.deleteItem}/></div>
         {router}
-        <p>Test by VU again</p>
+        <p>Test by VU again </p>
+            Test by Vu 3
         </dashboard>
         </HashRouter>)
     }
